@@ -21,5 +21,3 @@ combo.orderCombo()
 // 此方法最大好處是解耦合
 
 // 例子 : Java的inputstream 和 bufferedinputstream
-
-// JQuery $('').attr().html() 即為裝飾模式的一種 就是每執行一個函式 回傳新的物件 這是BUILDER
