@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+var Item_1 = require("./Item");
+var ConcreteDecorateItem_1 = require("./ConcreteDecorateItem");
+var Combo_1 = require("./Combo");
+var item = new Item_1.Item();
+var item1 = new ConcreteDecorateItem_1.Drink(item);
+var item2 = new ConcreteDecorateItem_1.Soup(item1);
+var item3 = new ConcreteDecorateItem_1.Cake(item2);
+item.order();
+item1.order();
+item2.order();
+item3.order();
+console.log("\n\u6216\u662F\u628A\u9019\u4E9B\u88DD\u98FE\u8B8A\u6210\u4E00\u500BSet \u76F4\u63A5\u65B0\u589E\n");
+var combo = new Combo_1.Combo();
+combo.orderCombo();

@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var Factory_1 = require("./Factory");
+var factory = new Factory_1.Factory();
+console.log("request for ComboA");
+var a1 = factory.getComboA("\u6B63\u5E38");
+a1.include();
+var a2 = factory.getComboA("\u98F2\u6599\u63DB\u7DA0\u8336");
+a2.include();
+console.log("request for ComboB");
+var b = factory.getComboB("\u5976\u8336\u4E0D\u52A0\u5976");
+b.include();

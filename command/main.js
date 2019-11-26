@@ -1,0 +1,17 @@
+"use strict";
+exports.__esModule = true;
+var Light_1 = require("./Light");
+var Door_1 = require("./Door");
+var Invoker_1 = require("./Invoker");
+var cmd = require("./ConcreteCommand");
+var invoker = new Invoker_1.Invoker();
+var light = new Light_1.Light();
+var door = new Door_1.Door();
+var turnOn = new cmd.TurnOnCommand(light);
+var turnOff = new cmd.TurnOffCommand(light);
+var openDoor = new cmd.OpenDoorCommand(door);
+var closeDoor = new cmd.CloseDoorCommand(door);
+invoker.addCmd(openDoor);
+invoker.addCmd(turnOn);
+invoker.addCmd(closeDoor);
+invoker.doCmd();

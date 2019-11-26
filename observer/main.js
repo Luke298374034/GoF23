@@ -1,0 +1,15 @@
+"use strict";
+exports.__esModule = true;
+var Podcast_1 = require("./Podcast");
+var Student_1 = require("./Student");
+var podcast = new Podcast_1.Podcast('ICRT');
+var podcast2 = new Podcast_1.Podcast('CNN');
+var sam = new Student_1.Student('Sam', podcast2);
+var anne = new Student_1.Student('Anne', podcast);
+var hung = new Student_1.Student('Hung', podcast2);
+sam.update();
+anne.update();
+hung.update();
+console.log("\u6216\u662F\u5F9E\u5EE3\u64AD\u901A\u77E5");
+podcast2.remove(sam);
+podcast2.notifyObservers();
